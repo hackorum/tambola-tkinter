@@ -73,7 +73,7 @@ def createTicket():
     global gameWindow
     global ticketGrid
 
-    mainLabel = Label(gameWindow, width=65, height=10,
+    mainLabel = Label(gameWindow, width=63, height=17,
                       relief='ridge', borderwidth=5, bg="#fff")
     mainLabel.place(x=95, y=119)
 
@@ -83,14 +83,14 @@ def createTicket():
     for row in range(0, 3):
         rowList = []
         for col in range(0, 9):
-            if platform.system() == 'Darwin':
-                boxButton = Button(gameWindow, font='ChalkboardSE 18', bg="#fff176", borderwidth=3,
-                                   pady=23, padx=-22, highlightbackground='#fff176', activebackground='#c5e1a5')
-                boxButton.place(x=xPos, y=yPos)
-            else:
-                boxButton = Button(gameWindow, font='ChalkboardSE 18',
-                                   bg="#fff176", borderwidth=3, width=3, height=2)
-                boxButton.place(x=xPos, y=yPos)
+            # if platform.system() == 'Darwin':
+            #     boxButton = Button(gameWindow, font='ChalkboardSE 18', bg="#fff176", borderwidth=3,
+            #                        pady=23, padx=-22, highlightbackground='#fff176', activebackground='#c5e1a5')
+            #     boxButton.place(x=xPos, y=yPos)
+            # else:
+            boxButton = Button(gameWindow, font='ChalkboardSE 18',
+                               bg="#fff176", borderwidth=3, width=3, height=2, pady=23, padx=-22, highlightbackground='#fff176', activebackground='#c5e1a5')
+            boxButton.place(x=xPos, y=yPos)
             rowList.append(boxButton)
             xPos += 64
         ticketGrid.append(rowList)
